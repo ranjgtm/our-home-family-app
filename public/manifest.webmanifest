@@ -1,0 +1,11 @@
+{
+  "name": "Our Home",
+  "short_name": "Our Home",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf5ec",
+  "theme_color": "#faf5ec",
+  "icons": [
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,126 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * "Our Home" design system — Botanical family direction.
+ * All color tokens are oklch. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-ink: var(--ink);
+  --color-mist: var(--mist);
+  --color-herb: var(--herb);
+  --color-rose: var(--rose);
+  --color-surface: var(--surface);
+  --color-peach: var(--peach);
+
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Botanical palette */
+  --brand: oklch(0.5 0.085 320);        /* dusty mauve / lavender — Ranjana */
+  --brand-soft: oklch(0.9 0.035 315);
+  --accent: oklch(0.6 0.12 58);         /* apricot / ochre — Husband */
+  --accent-foreground: oklch(0.99 0.01 80);
+  --ink: oklch(0.28 0.045 340);         /* deep plum text */
+  --mist: oklch(0.95 0.018 70);         /* warm tint */
+  --herb: oklch(0.52 0.075 150);        /* sage — Family */
+  --rose: oklch(0.58 0.11 15);          /* dusty rose */
+  --peach: oklch(0.9 0.05 55);
+  --surface: oklch(0.99 0.012 85);      /* warm off-white */
+
+  --background: oklch(0.975 0.018 85);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --primary: var(--brand);
+  --primary-foreground: oklch(0.99 0.012 85);
+  --secondary: var(--mist);
+  --secondary-foreground: var(--ink);
+  --muted: var(--mist);
+  --muted-foreground: oklch(0.5 0.03 340);
+  --border: oklch(0.9 0.02 60);
+  --input: oklch(0.9 0.02 60);
+  --ring: var(--brand);
+
+  --shadow-soft: 0 6px 24px -10px color-mix(in oklab, var(--ink) 18%, transparent);
+  --space-page: 1.25rem;
+}
+
+@utility glass {
+  background: color-mix(in oklab, var(--surface) 92%, transparent);
+  border: 1px solid color-mix(in oklab, var(--border) 80%, transparent);
+  box-shadow: var(--shadow-soft);
+}
+
+@utility glass2 {
+  background: color-mix(in oklab, var(--surface) 45%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid color-mix(in oklab, var(--surface) 60%, transparent);
+}
+
+@utility app-gradient {
+  background-image:
+    radial-gradient(circle at 10% 0%, color-mix(in oklab, var(--brand-soft) 55%, transparent), transparent 45%),
+    radial-gradient(circle at 100% 60%, color-mix(in oklab, var(--peach) 50%, transparent), transparent 45%),
+    linear-gradient(180deg, var(--background), var(--background));
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  font-variation-settings: "SOFT" 100, "WONK" 0;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+@utility eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}

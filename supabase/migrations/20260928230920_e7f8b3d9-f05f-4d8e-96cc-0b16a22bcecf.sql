@@ -1,0 +1,3 @@
+alter table public.expenses drop constraint expenses_category_check;
+alter table public.expenses add constraint expenses_category_check check (category = any (array['Groceries','Household','Home & Furniture','Child','Dining','Transport','Utilities','Health / Pharmacy','Clothing','Personal Care','Entertainment','Shopping','Other']));
+update public.expenses set category = 'Household', category_manual = true where id = '3f316d5e-cd44-4967-9073-275775db1a16' and lower(store) = 'ikea';

@@ -1,0 +1,1 @@
+alter table public.supermarket_offers add column if not exists image_source_url text, add column if not exists image_source_type text, add column if not exists image_last_verified_at timestamptz, add column if not exists store_name text, add column if not exists store_id text;

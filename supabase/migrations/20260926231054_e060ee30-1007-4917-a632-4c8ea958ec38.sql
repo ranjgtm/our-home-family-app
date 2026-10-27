@@ -1,0 +1,1 @@
+ALTER TABLE public.calendar_feeds ADD COLUMN IF NOT EXISTS show_details boolean NOT NULL DEFAULT true;

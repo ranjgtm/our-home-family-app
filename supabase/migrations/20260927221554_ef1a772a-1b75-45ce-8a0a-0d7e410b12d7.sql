@@ -1,0 +1,1 @@
+alter table public.households add column if not exists preferred_k_store text, add column if not exists preferred_s_store text;

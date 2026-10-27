@@ -1,0 +1,1 @@
+ALTER TABLE public.supermarket_offers ADD COLUMN image_url text;

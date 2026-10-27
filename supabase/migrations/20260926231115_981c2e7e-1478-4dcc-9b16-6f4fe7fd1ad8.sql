@@ -1,0 +1,1 @@
+DROP POLICY IF EXISTS "Members view calendar feeds" ON public.calendar_feeds;
