@@ -365,19 +365,26 @@ Possible future improvements include:
 
 ---
 
-## 📸 Screenshots
+## 📱 App Screenshots
+Screenshots of the mobile interface are added using sample household information.
 
-Screenshots of the mobile interface will be added using sample household information.
+### 🏠 Home Dashboard
+![Our Home dashboard](screenshots/home.png)
 
-Suggested screenshots:
+### 🛒 Shared Shopping
+![Shared shopping list](screenshots/shopping.png)
 
-1. Home dashboard
-2. Shared shopping list
-3. Pantry / At Home
-4. Meal planner
-5. Expense dashboard
-6. Shared calendar
-7. Grocery deals
+### 🍛 Pantry-Aware Meal Planning
+![Meal planner](screenshots/meals.png)
+
+### 💶 Household Expenses
+![Expense dashboard](screenshots/expenses.png)
+
+### 📅 Shared Calendar
+![Shared family calendar](screenshots/calendar.png)
+
+### 🏷️ Grocery Deals
+![Grocery deals](screenshots/deals.png)
 
 ---
 
